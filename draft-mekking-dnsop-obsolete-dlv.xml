@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- name="GENERATOR" content="github.com/mmarkdown/mmark Mmark Markdown Processor - mmark.nl" -->
+<!DOCTYPE rfc SYSTEM 'rfc2629.dtd' []>
+<rfc ipr="trust200902" category="info" xml:lang="en" consensus="yes" docName="draft-mekking-dnsop-obsolete-dlv">
+<?rfc toc="yes"?><?rfc symrefs="yes"?><?rfc sortrefs="yes"?><?rfc compact="yes"?><?rfc subcompact="no"?><?rfc comments="no"?>
+<front>
+<title abbrev="obsolete-dlv">Moving DNSSEC Lookaside Validation (DLV) to Historic Status</title><author initials="W.M." surname="Mekking" fullname="Matthijs Mekking"><organization>ISC</organization><address><postal><street>950 Charter St</street>
+<city>Redwood City</city>
+<code>94063</code>
+<country>USA</country>
+<region>CA</region>
+</postal><email>matthijs@isc.org</email>
+</address></author>
+<date year="2019" month="April" day="15"></date>
+<area>Operations and Management</area><workgroup>DNS Operations</workgroup><keyword>DNS</keyword>
+<keyword>DNSSEC</keyword>
+<keyword>DLV</keyword>
+
+<abstract><t>This document obsoletes DNSSEC lookaside validation (DLV) and reclassifies
+RFCs 4431 and 5074 as Historic.</t>
+</abstract>
+
+</front>
+
+<middle>
+
+<section anchor="introduction" title="Introduction">
+<t>DNSSEC Lookaside Validation (DLV) was introduced to assist with the adoption of
+DNSSEC <xref target="RFC4033"></xref> <xref target="RFC4034"></xref> <xref target="RFC4035"></xref> in a time where the root zone
+and many top level domains (TLDs) were unsigned, to help entities with signed
+zones under an unsigned parent zone, or that have registrars that don't accept
+DS records.  As of May 2019, the root zone is signed and 1389 out of 1531
+TLDs have a secure delegation from the root and DLV has served its purpose and
+can now retire.</t>
+</section>
+
+<section anchor="discussion" title="Discussion">
+<t>One could argue that DLV is still useful because there are still some unsigned
+TLDs and entities under those zones will not benefit from signing their zone.
+However, keeping the DLV mechanism also has disadvantages:</t>
+<t>
+<list style="symbols">
+<t>It reduces the pressure to get the parent zone signed.</t>
+<t>It reduces the pressure on registrars to accept DS records.</t>
+<t>It complicates validation code.</t>
+</list>
+</t>
+<t>In addition, not every validator actually implements DLV (only BIND 9 and
+Unbound) so even if an entity can use DLV to set up an alternate path to its
+trust anchor, its effect is limited.  Furthermore, there was one wellknown DLV
+registry (dlv.isc.org) and that has been deprecated (replaced with an empty
+zone) on September 30, 2017. With the absence of a wellknown DLV registry
+service it is unlikely that there is a real benefit for the protocol on
+the Internet nowadays.</t>
+<t>One other possible reason to keep DLV is to distribute trust anchors for
+private enterprises.  However it was never the intention for DLV to be used
+for this purpose, and DLV has some properties that do not entirely fit this
+use case:</t>
+<t>
+<list style="symbols">
+<t>It would be more desirable if the trust anchors for internal zones have a
+higher priority than the public trust anchors, but DLV works as a fallback.</t>
+<t>Since the zones are related to private networks, it would make more sense
+to make the internal network more secure to avoid name redirection, rather
+than complicate the DNS protocol.</t>
+</list>
+</t>
+<t>Given these arguments, plus its use case is fairly limited, and the above
+disadvantages to keep DLV, it is probably not worth the effort of maintaining
+the DLV mechanism.</t>
+</section>
+
+<section anchor="moving-dlv-to-historic-status" title="Moving DLV to Historic Status">
+<t>There are two RFCs that specify DLV.</t>
+<t>
+<list style="numbers">
+<t>RFC 4431 <xref target="RFC4431"></xref> specifies the DLV resource record.</t>
+<t>RFC 5074 <xref target="RFC5074"></xref> specifies the DLV mechanism for publishing trust
+anchors outside the DNS delegation chain and how validators can use them
+to validate DNSSEC-signed data.</t>
+</list>
+</t>
+<t>This document moves both RFC 4431 <xref target="RFC4431"></xref> and RFC 5074 <xref target="RFC5074"></xref> to
+Historic status.  This is a clear signal to implementers that the DLV
+resource record and the DLV mechanism SHOULD NOT be implemented or deployed.</t>
+
+<section anchor="documents-that-reference-the-dlv-rfcs" title="Documents that reference the DLV RFCs">
+<t>The RFCs that are being moved to Historic status are referenced by a couple
+of other documents.  The sections below describe what changes when the DLV
+RFCs have been reclassified as Historic.</t>
+
+<section anchor="documents-that-reference-rfc-4431" title="Documents that reference RFC 4431">
+<t>One RFC and one Internet Draft make reference to RFC 4431 <xref target="RFC4431"></xref>.</t>
+<t>RFC 5074 <xref target="RFC5074"></xref>, &quot;DNSSEC Lookaside Validation (DLV)&quot; describes the DLV
+mechanism itself, and is being moved to Historic status too.</t>
+<t>The draft &quot;YANG Types for DNS Classes and Resource Record Types&quot;
+<xref target="I-D.lhotka-dnsop-iana-class-type-yang"></xref> refers to RFC 4431 to describe
+the DLV entry in the YANG module iana-dns-class-rr-type.  This reference
+should be removed.</t>
+</section>
+
+<section anchor="documents-that-reference-rfc-5074" title="Documents that reference RFC 5074">
+<t>Three RFCs make reference to RFC 5074 <xref target="RFC5074"></xref>.</t>
+<t>RFC 6698, &quot;The DNS-Based Authentication of Named Entities (DANE) Transport
+Layer Security (TLS) Protocol: TLSA&quot; <xref target="RFC6698"></xref> specifies:</t>
+<t>DNSSEC forms certificates (the binding of an identity to a key) by
+  combining a DNSKEY, DS, or DLV resource record with an associated RRSIG
+  record.  These records then form a signing chain extending from the
+  client's trust anchors to the RR of interest.</t>
+<t>This document updates RFC 6698 to exclude the DLV resource record from
+certificates.</t>
+<t>RFC 6840, &quot;Clarifications and Implementation Notes for DNS Security
+(DNSSEC)&quot; <xref target="RFC6840"></xref> says that when trust anchors come from different
+sources, a validator may choose between them based on the perceived
+reliability of those sources. But in reality this does not happen in
+validators (both BIND 9 and Unbound have a option for a DLV trust anchor
+that can be used solely as a fallback).</t>
+<t>This document updates RFC 6840 to exclude the DLV registries from the trust
+anchor selection.</t>
+<t>RFC 8198, &quot;Aggressive Use of DNSSEC-Validated Cache&quot; <xref target="RFC8198"></xref> only
+references RFC 5074 because aggressive negative caching was first proposed
+there.</t>
+</section>
+</section>
+</section>
+
+<section anchor="iana-considerations" title="IANA Considerations">
+<t>IANA should update the annotation of the DLV RR type (code 32769) to
+&quot;Obsolete&quot; in the DNS Parameters registry.</t>
+</section>
+
+<section anchor="security-considerations" title="Security considerations">
+<t>When the DLV mechanism will go away, zones that rely on DLV for their
+validation will be treated as insecure.  The chance that this scenario actually
+occurs is very low, since no wellknown DLV registry exists.</t>
+</section>
+
+<section anchor="acknowledgements" title="Acknowledgements">
+<t>Reviewers.</t>
+</section>
+
+</middle>
+
+<back>
+<references title="Normative References">
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4431.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5074.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6840.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4033.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4034.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6698.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8198.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4035.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml-ids/reference.I-D.lhotka-dnsop-iana-class-type-yang.xml"?>
+</references>
+
+</back>
+
+</rfc>
