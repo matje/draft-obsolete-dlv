@@ -4,8 +4,8 @@
 
 DNS Operations                                                W. Mekking
 Internet-Draft                                                       ISC
-Intended status: Informational                            April 15, 2019
-Expires: October 17, 2019
+Intended status: Informational                             June 25, 2019
+Expires: December 27, 2019
 
 
       Moving DNSSEC Lookaside Validation (DLV) to Historic Status
@@ -31,7 +31,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on October 17, 2019.
+   This Internet-Draft will expire on December 27, 2019.
 
 Copyright Notice
 
@@ -136,8 +136,12 @@ Table of Contents
 
    One RFC and one Internet Draft make reference to RFC 4431 [RFC4431].
 
+3.1.1.1.  RFC 5074
+
    RFC 5074 [RFC5074], "DNSSEC Lookaside Validation (DLV)" describes the
    DLV mechanism itself, and is being moved to Historic status too.
+
+3.1.1.2.  I-D.lhotka-dnsop-iana-class-type-yang
 
    The draft "YANG Types for DNS Classes and Resource Record Types"
    [I-D.lhotka-dnsop-iana-class-type-yang] refers to RFC 4431 to
@@ -147,6 +151,8 @@ Table of Contents
 3.1.2.  Documents that reference RFC 5074
 
    Three RFCs make reference to RFC 5074 [RFC5074].
+
+3.1.2.1.  RFC 6698
 
    RFC 6698, "The DNS-Based Authentication of Named Entities (DANE)
    Transport Layer Security (TLS) Protocol: TLSA" [RFC6698] specifies:
@@ -159,6 +165,8 @@ Table of Contents
    This document updates RFC 6698 to exclude the DLV resource record
    from certificates.
 
+3.1.2.2.  RFC 6840
+
    RFC 6840, "Clarifications and Implementation Notes for DNS Security
    (DNSSEC)" [RFC6840] says that when trust anchors come from different
    sources, a validator may choose between them based on the perceived
@@ -168,6 +176,8 @@ Table of Contents
 
    This document updates RFC 6840 to exclude the DLV registries from the
    trust anchor selection.
+
+3.1.2.3.  RFC 8198
 
    RFC 8198, "Aggressive Use of DNSSEC-Validated Cache" [RFC8198] only
    references RFC 5074 because aggressive negative caching was first

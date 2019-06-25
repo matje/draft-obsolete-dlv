@@ -5,7 +5,7 @@ workgroup       = "DNS Operations"
 area            = "Operations and Management"
 submissiontype  = "IETF"
 ipr             = "trust200902"
-date            = 2019-04-15T17:16:00Z
+date            = 2019-06-25T09:57:00Z
 keyword         = [
     "DNS",
     "DNSSEC",
@@ -107,8 +107,12 @@ RFCs have been reclassified as Historic.
 
 One RFC and one Internet Draft make reference to RFC 4431 [@!RFC4431].
 
+#### RFC 5074
+
 RFC 5074 [@!RFC5074], "DNSSEC Lookaside Validation (DLV)" describes the DLV
 mechanism itself, and is being moved to Historic status too.
+
+#### I-D.lhotka-dnsop-iana-class-type-yang
 
 The draft "YANG Types for DNS Classes and Resource Record Types"
 [@!I-D.lhotka-dnsop-iana-class-type-yang] refers to RFC 4431 to describe
@@ -118,6 +122,8 @@ should be removed.
 ### Documents that reference RFC 5074
 
 Three RFCs make reference to RFC 5074 [@!RFC5074].
+
+#### RFC 6698
 
 RFC 6698, "The DNS-Based Authentication of Named Entities (DANE) Transport
 Layer Security (TLS) Protocol: TLSA" [@!RFC6698] specifies:
@@ -130,6 +136,8 @@ Layer Security (TLS) Protocol: TLSA" [@!RFC6698] specifies:
 This document updates RFC 6698 to exclude the DLV resource record from
 certificates.
 
+#### RFC 6840
+
 RFC 6840, "Clarifications and Implementation Notes for DNS Security
 (DNSSEC)" [@!RFC6840] says that when trust anchors come from different
 sources, a validator may choose between them based on the perceived
@@ -139,6 +147,8 @@ that can be used solely as a fallback).
 
 This document updates RFC 6840 to exclude the DLV registries from the trust
 anchor selection.
+
+#### RFC 8198
 
 RFC 8198, "Aggressive Use of DNSSEC-Validated Cache" [@!RFC8198] only
 references RFC 5074 because aggressive negative caching was first proposed

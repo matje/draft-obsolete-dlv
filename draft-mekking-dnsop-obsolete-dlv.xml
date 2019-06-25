@@ -11,7 +11,7 @@
 <region>CA</region>
 </postal><email>matthijs@isc.org</email>
 </address></author>
-<date year="2019" month="April" day="15"></date>
+<date year="2019" month="June" day="25"></date>
 <area>Operations and Management</area><workgroup>DNS Operations</workgroup><keyword>DNS</keyword>
 <keyword>DNSSEC</keyword>
 <keyword>DLV</keyword>
@@ -91,16 +91,24 @@ RFCs have been reclassified as Historic.</t>
 
 <section anchor="documents-that-reference-rfc-4431" title="Documents that reference RFC 4431">
 <t>One RFC and one Internet Draft make reference to RFC 4431 <xref target="RFC4431"></xref>.</t>
+
+<section anchor="rfc-5074" title="RFC 5074">
 <t>RFC 5074 <xref target="RFC5074"></xref>, &quot;DNSSEC Lookaside Validation (DLV)&quot; describes the DLV
 mechanism itself, and is being moved to Historic status too.</t>
+</section>
+
+<section anchor="i-d-lhotka-dnsop-iana-class-type-yang" title="I-D.lhotka-dnsop-iana-class-type-yang">
 <t>The draft &quot;YANG Types for DNS Classes and Resource Record Types&quot;
 <xref target="I-D.lhotka-dnsop-iana-class-type-yang"></xref> refers to RFC 4431 to describe
 the DLV entry in the YANG module iana-dns-class-rr-type.  This reference
 should be removed.</t>
 </section>
+</section>
 
 <section anchor="documents-that-reference-rfc-5074" title="Documents that reference RFC 5074">
 <t>Three RFCs make reference to RFC 5074 <xref target="RFC5074"></xref>.</t>
+
+<section anchor="rfc-6698" title="RFC 6698">
 <t>RFC 6698, &quot;The DNS-Based Authentication of Named Entities (DANE) Transport
 Layer Security (TLS) Protocol: TLSA&quot; <xref target="RFC6698"></xref> specifies:</t>
 <t>DNSSEC forms certificates (the binding of an identity to a key) by
@@ -109,6 +117,9 @@ Layer Security (TLS) Protocol: TLSA&quot; <xref target="RFC6698"></xref> specifi
   client's trust anchors to the RR of interest.</t>
 <t>This document updates RFC 6698 to exclude the DLV resource record from
 certificates.</t>
+</section>
+
+<section anchor="rfc-6840" title="RFC 6840">
 <t>RFC 6840, &quot;Clarifications and Implementation Notes for DNS Security
 (DNSSEC)&quot; <xref target="RFC6840"></xref> says that when trust anchors come from different
 sources, a validator may choose between them based on the perceived
@@ -117,9 +128,13 @@ validators (both BIND 9 and Unbound have a option for a DLV trust anchor
 that can be used solely as a fallback).</t>
 <t>This document updates RFC 6840 to exclude the DLV registries from the trust
 anchor selection.</t>
+</section>
+
+<section anchor="rfc-8198" title="RFC 8198">
 <t>RFC 8198, &quot;Aggressive Use of DNSSEC-Validated Cache&quot; <xref target="RFC8198"></xref> only
 references RFC 5074 because aggressive negative caching was first proposed
 there.</t>
+</section>
 </section>
 </section>
 </section>
@@ -143,15 +158,15 @@ occurs is very low, since no wellknown DLV registry exists.</t>
 
 <back>
 <references title="Normative References">
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4034.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4035.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4431.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5074.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6840.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4033.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4034.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml-ids/reference.I-D.lhotka-dnsop-iana-class-type-yang.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6698.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8198.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4035.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml-ids/reference.I-D.lhotka-dnsop-iana-class-type-yang.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4033.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6840.xml"?>
 </references>
 
 </back>
