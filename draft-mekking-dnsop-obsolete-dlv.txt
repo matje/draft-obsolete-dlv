@@ -89,9 +89,9 @@ Table of Contents
    In addition, not every validator actually implements DLV (only BIND 9
    and Unbound) so even if an entity can use DLV to set up an alternate
    path to its trust anchor, its effect is limited.  Furthermore, there
-   was one wellknown DLV registry (dlv.isc.org) and that has been
+   was one well-known DLV registry (dlv.isc.org) and that has been
    deprecated (replaced with an empty zone) on September 30, 2017.  With
-   the absence of a wellknown DLV registry service it is unlikely that
+   the absence of a well-known DLV registry service it is unlikely that
    there is a real benefit for the protocol on the Internet nowadays.
 
    One other possible reason to keep DLV is to distribute trust anchors
@@ -192,12 +192,12 @@ Table of Contents
 
    When the DLV mechanism will go away, zones that rely on DLV for their
    validation will be treated as insecure.  The chance that this
-   scenario actually occurs is very low, since no wellknown DLV registry
-   exists.
+   scenario actually occurs is very low, since no well-known DLV
+   registry exists.
 
 6.  Acknowledgements
 
-   Reviewers.
+   Ond&#345;ej Sury for initial review.
 
 7.  Normative References
 

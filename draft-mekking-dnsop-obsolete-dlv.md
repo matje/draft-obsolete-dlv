@@ -63,9 +63,9 @@ However, keeping the DLV mechanism also has disadvantages:
 
 In addition, not every validator actually implements DLV (only BIND 9 and
 Unbound) so even if an entity can use DLV to set up an alternate path to its
-trust anchor, its effect is limited.  Furthermore, there was one wellknown DLV
+trust anchor, its effect is limited.  Furthermore, there was one well-known DLV
 registry (dlv.isc.org) and that has been deprecated (replaced with an empty
-zone) on September 30, 2017. With the absence of a wellknown DLV registry
+zone) on September 30, 2017. With the absence of a well-known DLV registry
 service it is unlikely that there is a real benefit for the protocol on 
 the Internet nowadays.
 
@@ -163,11 +163,11 @@ IANA should update the annotation of the DLV RR type (code 32769) to
 
 When the DLV mechanism will go away, zones that rely on DLV for their
 validation will be treated as insecure.  The chance that this scenario actually 
-occurs is very low, since no wellknown DLV registry exists.
+occurs is very low, since no well-known DLV registry exists.
 
 # Acknowledgements
 
-Reviewers.
+Ondřej Surý for initial review.
 
 {backmatter}
 

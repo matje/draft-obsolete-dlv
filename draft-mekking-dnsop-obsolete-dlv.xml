@@ -47,9 +47,9 @@ However, keeping the DLV mechanism also has disadvantages:</t>
 </t>
 <t>In addition, not every validator actually implements DLV (only BIND 9 and
 Unbound) so even if an entity can use DLV to set up an alternate path to its
-trust anchor, its effect is limited.  Furthermore, there was one wellknown DLV
+trust anchor, its effect is limited.  Furthermore, there was one well-known DLV
 registry (dlv.isc.org) and that has been deprecated (replaced with an empty
-zone) on September 30, 2017. With the absence of a wellknown DLV registry
+zone) on September 30, 2017. With the absence of a well-known DLV registry
 service it is unlikely that there is a real benefit for the protocol on
 the Internet nowadays.</t>
 <t>One other possible reason to keep DLV is to distribute trust anchors for
@@ -147,26 +147,26 @@ there.</t>
 <section anchor="security-considerations" title="Security considerations">
 <t>When the DLV mechanism will go away, zones that rely on DLV for their
 validation will be treated as insecure.  The chance that this scenario actually
-occurs is very low, since no wellknown DLV registry exists.</t>
+occurs is very low, since no well-known DLV registry exists.</t>
 </section>
 
 <section anchor="acknowledgements" title="Acknowledgements">
-<t>Reviewers.</t>
+<t>Ondřej Surý for initial review.</t>
 </section>
 
 </middle>
 
 <back>
 <references title="Normative References">
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4034.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml-ids/reference.I-D.lhotka-dnsop-iana-class-type-yang.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4035.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4431.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5074.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml-ids/reference.I-D.lhotka-dnsop-iana-class-type-yang.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6698.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6840.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8198.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4033.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6840.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4034.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6698.xml"?>
 </references>
 
 </back>
