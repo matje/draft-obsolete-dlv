@@ -11,6 +11,13 @@
 <region>CA</region>
 </postal><email>matthijs@isc.org</email>
 </address></author>
+<author initials="D." surname="Mahoney" fullname="Dan Mahoney"><organization>ISC</organization><address><postal><street>950 Charter St</street>
+<city>Redwood City</city>
+<code>94063</code>
+<country>USA</country>
+<region>CA</region>
+</postal><email>dmahoney@isc.org</email>
+</address></author>
 <date year="2019" month="June" day="25"></date>
 <area>Operations and Management</area><workgroup>DNS Operations</workgroup><keyword>DNS</keyword>
 <keyword>DNSSEC</keyword>
@@ -30,7 +37,7 @@ DNSSEC <xref target="RFC4033"></xref> <xref target="RFC4034"></xref> <xref targe
 and many top level domains (TLDs) were unsigned, to help entities with signed
 zones under an unsigned parent zone, or that have registrars that don't accept
 DS records.  As of May 2019, the root zone is signed and 1389 out of 1531
-TLDs have a secure delegation from the root and DLV has served its purpose and
+TLDs have a secure delegation from the root; thus DLV has served its purpose and
 can now retire.</t>
 </section>
 
@@ -48,10 +55,10 @@ However, keeping the DLV mechanism also has disadvantages:</t>
 <t>In addition, not every validator actually implements DLV (only BIND 9 and
 Unbound) so even if an entity can use DLV to set up an alternate path to its
 trust anchor, its effect is limited.  Furthermore, there was one well-known DLV
-registry (dlv.isc.org) and that has been deprecated (replaced with an empty
-zone) on September 30, 2017. With the absence of a well-known DLV registry
-service it is unlikely that there is a real benefit for the protocol on
-the Internet nowadays.</t>
+registry (dlv.isc.org) and that has been deprecated (replaced with a signed
+empty zone) on September 30, 2017. With the absence of a well-known DLV
+registry service it is unlikely that there is a real benefit for the protocol
+on the Internet nowadays.</t>
 <t>One other possible reason to keep DLV is to distribute trust anchors for
 private enterprises.  However it was never the intention for DLV to be used
 for this purpose, and DLV has some properties that do not entirely fit this
@@ -65,13 +72,13 @@ to make the internal network more secure to avoid name redirection, rather
 than complicate the DNS protocol.</t>
 </list>
 </t>
-<t>Given these arguments, plus its use case is fairly limited, and the above
+<t>Given these arguments, plus its fairly limited use case, and the above
 disadvantages to keep DLV, it is probably not worth the effort of maintaining
 the DLV mechanism.</t>
 </section>
 
 <section anchor="moving-dlv-to-historic-status" title="Moving DLV to Historic Status">
-<t>There are two RFCs that specify DLV.</t>
+<t>There are two RFCs that specify DLV:</t>
 <t>
 <list style="numbers">
 <t>RFC 4431 <xref target="RFC4431"></xref> specifies the DLV resource record.</t>
@@ -145,7 +152,7 @@ there.</t>
 </section>
 
 <section anchor="security-considerations" title="Security considerations">
-<t>When the DLV mechanism will go away, zones that rely on DLV for their
+<t>When the DLV mechanism goes away, zones that rely on DLV for their
 validation will be treated as insecure.  The chance that this scenario actually
 occurs is very low, since no well-known DLV registry exists.</t>
 </section>
@@ -158,15 +165,15 @@ occurs is very low, since no well-known DLV registry exists.</t>
 
 <back>
 <references title="Normative References">
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml-ids/reference.I-D.lhotka-dnsop-iana-class-type-yang.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4035.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4431.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5074.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6840.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8198.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4035.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4431.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml-ids/reference.I-D.lhotka-dnsop-iana-class-type-yang.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6698.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4033.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4034.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6698.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5074.xml"?>
 </references>
 
 </back>

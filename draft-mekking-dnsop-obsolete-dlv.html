@@ -390,7 +390,7 @@
   <meta name="generator" content="xml2rfc version 2.9.6 - https://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
-  <meta name="dct.creator" content="Mekking, W." />
+  <meta name="dct.creator" content="Mekking, W. and D. Mahoney" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-mekking-dnsop-obsolete-dlv" />
   <meta name="dct.issued" scheme="ISO8601" content="2019-06-25" />
   <meta name="dct.abstract" content="This document obsoletes DNSSEC lookaside validation (DLV) and reclassifies RFCs 4431 and 5074 as Historic." />
@@ -409,15 +409,15 @@
 </tr>
 <tr>
 <td class="left">Internet-Draft</td>
-<td class="right">ISC</td>
+<td class="right">D. Mahoney</td>
 </tr>
 <tr>
 <td class="left">Intended status: Informational</td>
-<td class="right">June 25, 2019</td>
+<td class="right">ISC</td>
 </tr>
 <tr>
 <td class="left">Expires: December 27, 2019</td>
-<td class="right"></td>
+<td class="right">June 25, 2019</td>
 </tr>
 
     	
@@ -463,7 +463,7 @@
 </li>
 <li>7.   <a href="#rfc.references">Normative References</a>
 </li>
-<li><a href="#rfc.authors">Author's Address</a>
+<li><a href="#rfc.authors">Authors' Addresses</a>
 </li>
 
 
@@ -472,7 +472,7 @@
   <h1 id="rfc.section.1">
 <a href="#rfc.section.1">1.</a> <a href="#introduction" id="introduction">Introduction</a>
 </h1>
-<p id="rfc.section.1.p.1">DNSSEC Lookaside Validation (DLV) was introduced to assist with the adoption of DNSSEC <a href="#RFC4033" class="xref">[RFC4033]</a> <a href="#RFC4034" class="xref">[RFC4034]</a> <a href="#RFC4035" class="xref">[RFC4035]</a> in a time where the root zone and many top level domains (TLDs) were unsigned, to help entities with signed zones under an unsigned parent zone, or that have registrars that don't accept DS records.  As of May 2019, the root zone is signed and 1389 out of 1531 TLDs have a secure delegation from the root and DLV has served its purpose and can now retire.</p>
+<p id="rfc.section.1.p.1">DNSSEC Lookaside Validation (DLV) was introduced to assist with the adoption of DNSSEC <a href="#RFC4033" class="xref">[RFC4033]</a> <a href="#RFC4034" class="xref">[RFC4034]</a> <a href="#RFC4035" class="xref">[RFC4035]</a> in a time where the root zone and many top level domains (TLDs) were unsigned, to help entities with signed zones under an unsigned parent zone, or that have registrars that don't accept DS records.  As of May 2019, the root zone is signed and 1389 out of 1531 TLDs have a secure delegation from the root; thus DLV has served its purpose and can now retire.</p>
 <h1 id="rfc.section.2">
 <a href="#rfc.section.2">2.</a> <a href="#discussion" id="discussion">Discussion</a>
 </h1>
@@ -486,7 +486,7 @@
 </ul>
 
 <p> </p>
-<p id="rfc.section.2.p.3">In addition, not every validator actually implements DLV (only BIND 9 and Unbound) so even if an entity can use DLV to set up an alternate path to its trust anchor, its effect is limited.  Furthermore, there was one well-known DLV registry (dlv.isc.org) and that has been deprecated (replaced with an empty zone) on September 30, 2017. With the absence of a well-known DLV registry service it is unlikely that there is a real benefit for the protocol on the Internet nowadays.</p>
+<p id="rfc.section.2.p.3">In addition, not every validator actually implements DLV (only BIND 9 and Unbound) so even if an entity can use DLV to set up an alternate path to its trust anchor, its effect is limited.  Furthermore, there was one well-known DLV registry (dlv.isc.org) and that has been deprecated (replaced with a signed empty zone) on September 30, 2017. With the absence of a well-known DLV registry service it is unlikely that there is a real benefit for the protocol on the Internet nowadays.</p>
 <p id="rfc.section.2.p.4">One other possible reason to keep DLV is to distribute trust anchors for private enterprises.  However it was never the intention for DLV to be used for this purpose, and DLV has some properties that do not entirely fit this use case:</p>
 <p></p>
 
@@ -496,11 +496,11 @@
 </ul>
 
 <p> </p>
-<p id="rfc.section.2.p.6">Given these arguments, plus its use case is fairly limited, and the above disadvantages to keep DLV, it is probably not worth the effort of maintaining the DLV mechanism.</p>
+<p id="rfc.section.2.p.6">Given these arguments, plus its fairly limited use case, and the above disadvantages to keep DLV, it is probably not worth the effort of maintaining the DLV mechanism.</p>
 <h1 id="rfc.section.3">
 <a href="#rfc.section.3">3.</a> <a href="#moving-dlv-to-historic-status" id="moving-dlv-to-historic-status">Moving DLV to Historic Status</a>
 </h1>
-<p id="rfc.section.3.p.1">There are two RFCs that specify DLV.</p>
+<p id="rfc.section.3.p.1">There are two RFCs that specify DLV:</p>
 <p></p>
 
 <ol>
@@ -552,7 +552,7 @@
 <h1 id="rfc.section.5">
 <a href="#rfc.section.5">5.</a> <a href="#security-considerations" id="security-considerations">Security considerations</a>
 </h1>
-<p id="rfc.section.5.p.1">When the DLV mechanism will go away, zones that rely on DLV for their validation will be treated as insecure.  The chance that this scenario actually occurs is very low, since no well-known DLV registry exists.</p>
+<p id="rfc.section.5.p.1">When the DLV mechanism goes away, zones that rely on DLV for their validation will be treated as insecure.  The chance that this scenario actually occurs is very low, since no well-known DLV registry exists.</p>
 <h1 id="rfc.section.6">
 <a href="#rfc.section.6">6.</a> <a href="#acknowledgements" id="acknowledgements">Acknowledgements</a>
 </h1>
@@ -606,7 +606,7 @@
 <a>Fujiwara, K.</a>, <a>Kato, A.</a> and <a>W. Kumari</a>, "<a href="https://tools.ietf.org/html/rfc8198">Aggressive Use of DNSSEC-Validated Cache</a>", RFC 8198, DOI 10.17487/RFC8198, July 2017.</td>
 </tr>
 </tbody></table>
-<h1 id="rfc.authors"><a href="#rfc.authors">Author's Address</a></h1>
+<h1 id="rfc.authors"><a href="#rfc.authors">Authors' Addresses</a></h1>
 <div class="avoidbreak">
   <address class="vcard">
 	<span class="vcardline">
@@ -627,6 +627,28 @@
 	  <span class="country-name vcardline">USA</span>
 	</span>
 	<span class="vcardline">EMail: <a href="mailto:matthijs@isc.org">matthijs@isc.org</a></span>
+
+  </address>
+</div><div class="avoidbreak">
+  <address class="vcard">
+	<span class="vcardline">
+	  <span class="fn">Dan Mahoney</span> 
+	  <span class="n hidden">
+		<span class="family-name">Mahoney</span>
+	  </span>
+	</span>
+	<span class="org vcardline">ISC</span>
+	<span class="adr">
+	  <span class="vcardline">950 Charter St</span>
+
+	  <span class="vcardline">
+		<span class="locality">Redwood City</span>,  
+		<span class="region">CA</span> 
+		<span class="code">94063</span>
+	  </span>
+	  <span class="country-name vcardline">USA</span>
+	</span>
+	<span class="vcardline">EMail: <a href="mailto:dmahoney@isc.org">dmahoney@isc.org</a></span>
 
   </address>
 </div>

@@ -3,9 +3,9 @@
 
 
 DNS Operations                                                W. Mekking
-Internet-Draft                                                       ISC
-Intended status: Informational                             June 25, 2019
-Expires: December 27, 2019
+Internet-Draft                                                D. Mahoney
+Intended status: Informational                                       ISC
+Expires: December 27, 2019                                 June 25, 2019
 
 
       Moving DNSSEC Lookaside Validation (DLV) to Historic Status
@@ -60,7 +60,7 @@ Table of Contents
    5.  Security considerations
    6.  Acknowledgements
    7.  Normative References
-   Author's Address
+   Authors' Addresses
 
 1.  Introduction
 
@@ -70,7 +70,7 @@ Table of Contents
    entities with signed zones under an unsigned parent zone, or that
    have registrars that don't accept DS records.  As of May 2019, the
    root zone is signed and 1389 out of 1531 TLDs have a secure
-   delegation from the root and DLV has served its purpose and can now
+   delegation from the root; thus DLV has served its purpose and can now
    retire.
 
 2.  Discussion
@@ -90,9 +90,10 @@ Table of Contents
    and Unbound) so even if an entity can use DLV to set up an alternate
    path to its trust anchor, its effect is limited.  Furthermore, there
    was one well-known DLV registry (dlv.isc.org) and that has been
-   deprecated (replaced with an empty zone) on September 30, 2017.  With
-   the absence of a well-known DLV registry service it is unlikely that
-   there is a real benefit for the protocol on the Internet nowadays.
+   deprecated (replaced with a signed empty zone) on September 30, 2017.
+   With the absence of a well-known DLV registry service it is unlikely
+   that there is a real benefit for the protocol on the Internet
+   nowadays.
 
    One other possible reason to keep DLV is to distribute trust anchors
    for private enterprises.  However it was never the intention for DLV
@@ -107,13 +108,13 @@ Table of Contents
       more sense to make the internal network more secure to avoid name
       redirection, rather than complicate the DNS protocol.
 
-   Given these arguments, plus its use case is fairly limited, and the
+   Given these arguments, plus its fairly limited use case, and the
    above disadvantages to keep DLV, it is probably not worth the effort
    of maintaining the DLV mechanism.
 
 3.  Moving DLV to Historic Status
 
-   There are two RFCs that specify DLV.
+   There are two RFCs that specify DLV:
 
    1.  RFC 4431 [RFC4431] specifies the DLV resource record.
 
@@ -190,7 +191,7 @@ Table of Contents
 
 5.  Security considerations
 
-   When the DLV mechanism will go away, zones that rely on DLV for their
+   When the DLV mechanism goes away, zones that rely on DLV for their
    validation will be treated as insecure.  The chance that this
    scenario actually occurs is very low, since no well-known DLV
    registry exists.
@@ -244,7 +245,7 @@ Table of Contents
               DNSSEC-Validated Cache", RFC 8198, DOI 10.17487/RFC8198,
               July 2017, <https://www.rfc-editor.org/info/rfc8198>.
 
-Author's Address
+Authors' Addresses
 
    Matthijs Mekking
    ISC
@@ -253,4 +254,13 @@ Author's Address
    USA
 
    Email: matthijs@isc.org
+
+
+   Dan Mahoney
+   ISC
+   950 Charter St
+   Redwood City, CA  94063
+   USA
+
+   Email: dmahoney@isc.org
 

@@ -31,6 +31,20 @@ organization    = "ISC"
   code          = "94063"
   country       = "USA"
 
+[[author]]
+initials        = "D."
+surname         = "Mahoney"
+fullname        = "Dan Mahoney"
+organization    = "ISC"
+ [author.address]
+ email          = "dmahoney@isc.org"
+  [author.address.postal]
+  street        = "950 Charter St"
+  city          = "Redwood City"
+  region        = "CA"
+  code          = "94063"
+  country       = "USA"
+
 %%%
 
 .# Abstract
@@ -48,7 +62,7 @@ DNSSEC [@!RFC4033] [@!RFC4034] [@!RFC4035] in a time where the root zone
 and many top level domains (TLDs) were unsigned, to help entities with signed
 zones under an unsigned parent zone, or that have registrars that don't accept
 DS records.  As of May 2019, the root zone is signed and 1389 out of 1531
-TLDs have a secure delegation from the root and DLV has served its purpose and
+TLDs have a secure delegation from the root; thus DLV has served its purpose and
 can now retire.
 
 # Discussion
@@ -64,10 +78,10 @@ However, keeping the DLV mechanism also has disadvantages:
 In addition, not every validator actually implements DLV (only BIND 9 and
 Unbound) so even if an entity can use DLV to set up an alternate path to its
 trust anchor, its effect is limited.  Furthermore, there was one well-known DLV
-registry (dlv.isc.org) and that has been deprecated (replaced with an empty
-zone) on September 30, 2017. With the absence of a well-known DLV registry
-service it is unlikely that there is a real benefit for the protocol on 
-the Internet nowadays.
+registry (dlv.isc.org) and that has been deprecated (replaced with a signed
+empty zone) on September 30, 2017. With the absence of a well-known DLV
+registry service it is unlikely that there is a real benefit for the protocol
+on the Internet nowadays.
 
 One other possible reason to keep DLV is to distribute trust anchors for
 private enterprises.  However it was never the intention for DLV to be used
@@ -80,13 +94,13 @@ use case:
   to make the internal network more secure to avoid name redirection, rather
   than complicate the DNS protocol.
 
-Given these arguments, plus its use case is fairly limited, and the above
+Given these arguments, plus its fairly limited use case, and the above
 disadvantages to keep DLV, it is probably not worth the effort of maintaining
 the DLV mechanism.
 
 # Moving DLV to Historic Status
 
-There are two RFCs that specify DLV.
+There are two RFCs that specify DLV:
 
 1. RFC 4431 [@!RFC4431] specifies the DLV resource record.
 2. RFC 5074 [@!RFC5074] specifies the DLV mechanism for publishing trust
@@ -161,7 +175,7 @@ IANA should update the annotation of the DLV RR type (code 32769) to
 
 # Security considerations
 
-When the DLV mechanism will go away, zones that rely on DLV for their
+When the DLV mechanism goes away, zones that rely on DLV for their
 validation will be treated as insecure.  The chance that this scenario actually 
 occurs is very low, since no well-known DLV registry exists.
 
