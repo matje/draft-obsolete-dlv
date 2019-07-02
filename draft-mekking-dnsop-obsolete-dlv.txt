@@ -5,7 +5,7 @@
 DNS Operations                                                W. Mekking
 Internet-Draft                                                D. Mahoney
 Intended status: Informational                                       ISC
-Expires: December 27, 2019                                 June 25, 2019
+Expires: January 3, 2020                                    July 2, 2019
 
 
       Moving DNSSEC Lookaside Validation (DLV) to Historic Status
@@ -31,7 +31,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on December 27, 2019.
+   This Internet-Draft will expire on January 3, 2020.
 
 Copyright Notice
 
