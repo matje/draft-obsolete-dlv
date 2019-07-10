@@ -119,19 +119,12 @@ RFCs have been reclassified as Historic.
 
 ### Documents that reference RFC 4431
 
-One RFC and one Internet Draft make reference to RFC 4431 [@!RFC4431].
+One RFC makes reference to RFC 4431 [@!RFC4431].
 
 #### RFC 5074
 
 RFC 5074 [@!RFC5074], "DNSSEC Lookaside Validation (DLV)" describes the DLV
 mechanism itself, and is being moved to Historic status too.
-
-#### I-D.lhotka-dnsop-iana-class-type-yang
-
-The draft "YANG Types for DNS Classes and Resource Record Types"
-[@!I-D.lhotka-dnsop-iana-class-type-yang] refers to RFC 4431 to describe
-the DLV entry in the YANG module iana-dns-class-rr-type.  This reference
-should be removed.
 
 ### Documents that reference RFC 5074
 
