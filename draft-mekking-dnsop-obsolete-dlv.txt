@@ -5,11 +5,11 @@
 DNS Operations                                                W. Mekking
 Internet-Draft                                                D. Mahoney
 Intended status: Informational                                       ISC
-Expires: January 3, 2020                                    July 2, 2019
+Expires: January 11, 2020                                  July 10, 2019
 
 
       Moving DNSSEC Lookaside Validation (DLV) to Historic Status
-                    draft-mekking-dnsop-obsolete-dlv
+                  draft-mekking-dnsop-obsolete-dlv-01
 
 Abstract
 
@@ -31,7 +31,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on January 3, 2020.
+   This Internet-Draft will expire on January 11, 2020.
 
 Copyright Notice
 
@@ -68,10 +68,10 @@ Table of Contents
    adoption of DNSSEC [RFC4033] [RFC4034] [RFC4035] in a time where the
    root zone and many top level domains (TLDs) were unsigned, to help
    entities with signed zones under an unsigned parent zone, or that
-   have registrars that don't accept DS records.  As of May 2019, the
-   root zone is signed and 1389 out of 1531 TLDs have a secure
-   delegation from the root; thus DLV has served its purpose and can now
-   retire.
+   have registrars that don't accept DS records.  The root zone is
+   signed since July 2010 and as of May 2019, 1389 out of 1531 TLDs have
+   a secure delegation from the root; thus DLV has served its purpose
+   and can now retire.
 
 2.  Discussion
 
@@ -135,19 +135,12 @@ Table of Contents
 
 3.1.1.  Documents that reference RFC 4431
 
-   One RFC and one Internet Draft make reference to RFC 4431 [RFC4431].
+   One RFC makes reference to RFC 4431 [RFC4431].
 
 3.1.1.1.  RFC 5074
 
    RFC 5074 [RFC5074], "DNSSEC Lookaside Validation (DLV)" describes the
    DLV mechanism itself, and is being moved to Historic status too.
-
-3.1.1.2.  I-D.lhotka-dnsop-iana-class-type-yang
-
-   The draft "YANG Types for DNS Classes and Resource Record Types"
-   [I-D.lhotka-dnsop-iana-class-type-yang] refers to RFC 4431 to
-   describe the DLV entry in the YANG module iana-dns-class-rr-type.
-   This reference should be removed.
 
 3.1.2.  Documents that reference RFC 5074
 
@@ -198,14 +191,9 @@ Table of Contents
 
 6.  Acknowledgements
 
-   Ond&#345;ej Sury for initial review.
+   Ondrej Sury for initial review.
 
 7.  Normative References
-
-   [I-D.lhotka-dnsop-iana-class-type-yang]
-              Lhotka, L. and P. Spacek, "YANG Types for DNS Classes and
-              Resource Record Types", draft-lhotka-dnsop-iana-class-
-              type-yang-01 (work in progress), February 2019.
 
    [RFC4033]  Arends, R., Austein, R., Larson, M., Massey, D., and S.
               Rose, "DNS Security Introduction and Requirements",
@@ -251,7 +239,7 @@ Authors' Addresses
    ISC
    950 Charter St
    Redwood City, CA  94063
-   USA
+   Netherlands
 
    Email: matthijs@isc.org
 
