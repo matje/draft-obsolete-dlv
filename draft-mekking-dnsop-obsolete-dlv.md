@@ -5,7 +5,7 @@ workgroup       = "DNS Operations"
 area            = "Operations and Management"
 submissiontype  = "IETF"
 ipr             = "trust200902"
-date            = 2019-07-02T10:18:00Z
+date            = 2019-07-10T10:18:00Z
 keyword         = [
     "DNS",
     "DNSSEC",
@@ -14,7 +14,7 @@ keyword         = [
 
 [seriesInfo]
 name            = "Internet-Draft"
-value           = "draft-mekking-dnsop-obsolete-dlv"
+value           = "draft-mekking-dnsop-obsolete-dlv-01"
 status          = "informational"
 
 [[author]]
@@ -29,7 +29,7 @@ organization    = "ISC"
   city          = "Redwood City"
   region        = "CA"
   code          = "94063"
-  country       = "USA"
+  country       = "Netherlands"
 
 [[author]]
 initials        = "D."
@@ -61,9 +61,9 @@ DNSSEC Lookaside Validation (DLV) was introduced to assist with the adoption of
 DNSSEC [@!RFC4033] [@!RFC4034] [@!RFC4035] in a time where the root zone
 and many top level domains (TLDs) were unsigned, to help entities with signed
 zones under an unsigned parent zone, or that have registrars that don't accept
-DS records.  As of May 2019, the root zone is signed and 1389 out of 1531
-TLDs have a secure delegation from the root; thus DLV has served its purpose and
-can now retire.
+DS records.  The root zone is signed since July 2010 and as of May 2019,
+1389 out of 1531 TLDs have a secure delegation from the root; thus DLV has
+served its purpose and can now retire.
 
 # Discussion
 
@@ -181,7 +181,7 @@ occurs is very low, since no well-known DLV registry exists.
 
 # Acknowledgements
 
-Ondřej Surý for initial review.
+Ondrej Sury for initial review.
 
 {backmatter}
 
