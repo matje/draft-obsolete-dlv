@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- name="GENERATOR" content="github.com/mmarkdown/mmark Mmark Markdown Processor - mmark.nl" -->
 <!DOCTYPE rfc SYSTEM 'rfc2629.dtd' []>
-<rfc ipr="trust200902" category="info" xml:lang="en" consensus="yes" docName="draft-mekking-dnsop-obsolete-dlv-01">
+<rfc ipr="trust200902" category="info" xml:lang="en" consensus="yes" docName="draft-ietf-dnsop-obsolete-dlv-00">
 <?rfc toc="yes"?><?rfc symrefs="yes"?><?rfc sortrefs="yes"?><?rfc compact="yes"?><?rfc subcompact="no"?><?rfc comments="no"?>
 <front>
 <title abbrev="obsolete-dlv">Moving DNSSEC Lookaside Validation (DLV) to Historic Status</title><author initials="W.M." surname="Mekking" fullname="Matthijs Mekking"><organization>ISC</organization><address><postal><street>950 Charter St</street>
@@ -18,7 +18,7 @@
 <region>CA</region>
 </postal><email>dmahoney@isc.org</email>
 </address></author>
-<date year="2019" month="July" day="10"></date>
+<date year="2019" month="July" day="26"></date>
 <area>Operations and Management</area><workgroup>DNS Operations</workgroup><keyword>DNS</keyword>
 <keyword>DNSSEC</keyword>
 <keyword>DLV</keyword>
@@ -59,21 +59,10 @@ registry (dlv.isc.org) and that has been deprecated (replaced with a signed
 empty zone) on September 30, 2017. With the absence of a well-known DLV
 registry service it is unlikely that there is a real benefit for the protocol
 on the Internet nowadays.</t>
-<t>One other possible reason to keep DLV is to distribute trust anchors for
-private enterprises.  However it was never the intention for DLV to be used
-for this purpose, and DLV has some properties that do not entirely fit this
-use case:</t>
-<t>
-<list style="symbols">
-<t>It would be more desirable if the trust anchors for internal zones have a
-higher priority than the public trust anchors, but DLV works as a fallback.</t>
-<t>Since the zones are related to private networks, it would make more sense
-to make the internal network more secure to avoid name redirection, rather
-than complicate the DNS protocol.</t>
-</list>
-</t>
-<t>Given these arguments, plus its fairly limited use case, and the above
-disadvantages to keep DLV, it is probably not worth the effort of maintaining
+<t>One other possible reason to keep DLV is to distribute trust anchors
+for private enterprises.  The authors are not aware of any such use
+of DLV.</t>
+<t>All things considered it is probably not worth the effort of maintaining
 the DLV mechanism.</t>
 </section>
 
@@ -158,7 +147,6 @@ occurs is very low, since no well-known DLV registry exists.</t>
 
 <back>
 <references title="Normative References">
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4033.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4034.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4035.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4431.xml"?>
@@ -166,6 +154,7 @@ occurs is very low, since no well-known DLV registry exists.</t>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6698.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6840.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8198.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4033.xml"?>
 </references>
 
 </back>

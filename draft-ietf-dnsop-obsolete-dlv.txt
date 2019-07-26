@@ -5,11 +5,11 @@
 DNS Operations                                                W. Mekking
 Internet-Draft                                                D. Mahoney
 Intended status: Informational                                       ISC
-Expires: January 11, 2020                                  July 10, 2019
+Expires: January 27, 2020                                  July 26, 2019
 
 
       Moving DNSSEC Lookaside Validation (DLV) to Historic Status
-                  draft-mekking-dnsop-obsolete-dlv-01
+                    draft-ietf-dnsop-obsolete-dlv-00
 
 Abstract
 
@@ -31,7 +31,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on January 11, 2020.
+   This Internet-Draft will expire on January 27, 2020.
 
 Copyright Notice
 
@@ -96,21 +96,11 @@ Table of Contents
    nowadays.
 
    One other possible reason to keep DLV is to distribute trust anchors
-   for private enterprises.  However it was never the intention for DLV
-   to be used for this purpose, and DLV has some properties that do not
-   entirely fit this use case:
+   for private enterprises.  The authors are not aware of any such use
+   of DLV.
 
-   o  It would be more desirable if the trust anchors for internal zones
-      have a higher priority than the public trust anchors, but DLV
-      works as a fallback.
-
-   o  Since the zones are related to private networks, it would make
-      more sense to make the internal network more secure to avoid name
-      redirection, rather than complicate the DNS protocol.
-
-   Given these arguments, plus its fairly limited use case, and the
-   above disadvantages to keep DLV, it is probably not worth the effort
-   of maintaining the DLV mechanism.
+   All things considered it is probably not worth the effort of
+   maintaining the DLV mechanism.
 
 3.  Moving DLV to Historic Status
 
