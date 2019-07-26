@@ -5,7 +5,7 @@ workgroup       = "DNS Operations"
 area            = "Operations and Management"
 submissiontype  = "IETF"
 ipr             = "trust200902"
-date            = 2019-07-10T10:18:00Z
+date            = 
 keyword         = [
     "DNS",
     "DNSSEC",
@@ -14,7 +14,7 @@ keyword         = [
 
 [seriesInfo]
 name            = "Internet-Draft"
-value           = "draft-mekking-dnsop-obsolete-dlv-01"
+value           = "draft-ietf-dnsop-obsolete-dlv-00"
 status          = "informational"
 
 [[author]]
@@ -83,19 +83,11 @@ empty zone) on September 30, 2017. With the absence of a well-known DLV
 registry service it is unlikely that there is a real benefit for the protocol
 on the Internet nowadays.
 
-One other possible reason to keep DLV is to distribute trust anchors for
-private enterprises.  However it was never the intention for DLV to be used
-for this purpose, and DLV has some properties that do not entirely fit this
-use case:
+One other possible reason to keep DLV is to distribute trust anchors
+for private enterprises.  The authors are not aware of any such use
+of DLV.
 
-* It would be more desirable if the trust anchors for internal zones have a
-  higher priority than the public trust anchors, but DLV works as a fallback.
-* Since the zones are related to private networks, it would make more sense
-  to make the internal network more secure to avoid name redirection, rather
-  than complicate the DNS protocol.
-
-Given these arguments, plus its fairly limited use case, and the above
-disadvantages to keep DLV, it is probably not worth the effort of maintaining
+All things considered it is probably not worth the effort of maintaining
 the DLV mechanism.
 
 # Moving DLV to Historic Status

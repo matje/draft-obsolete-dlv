@@ -1,6 +1,6 @@
 MMARK=${GOPATH}/bin/mmark
 
-DRAFT=draft-mekking-dnsop-obsolete-dlv
+DRAFT=draft-ietf-dnsop-obsolete-dlv
 
 OUT= ${DRAFT}.html ${DRAFT}.xml ${DRAFT}.txt
 
