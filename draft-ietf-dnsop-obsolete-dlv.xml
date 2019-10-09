@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- name="GENERATOR" content="github.com/mmarkdown/mmark Mmark Markdown Processor - mmark.miek.nl" -->
 <!DOCTYPE rfc SYSTEM 'rfc2629.dtd' []>
-<rfc ipr="trust200902" category="std" xml:lang="en" consensus="yes" updates="6698, 6840" docName="draft-ietf-dnsop-obsolete-dlv-00">
+<rfc ipr="trust200902" category="std" xml:lang="en" consensus="yes" updates="6698, 6840" docName="draft-ietf-dnsop-obsolete-dlv-01">
 <?rfc toc="yes"?><?rfc symrefs="yes"?><?rfc sortrefs="yes"?><?rfc compact="yes"?><?rfc subcompact="no"?><?rfc comments="no"?>
 <front>
 <title abbrev="obsolete-dlv">Moving DNSSEC Lookaside Validation (DLV) to Historic Status</title><author initials="W.M." surname="Mekking" fullname="Matthijs Mekking"><organization>ISC</organization><address><postal><street></street>
@@ -146,14 +146,14 @@ occurs is very low, since no well-known DLV registry exists.</t>
 
 <back>
 <references title="Normative References">
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6698.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6840.xml"?>
+<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8198.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4033.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4034.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4035.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4431.xml"?>
 <?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5074.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6698.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6840.xml"?>
-<?rfc include="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8198.xml"?>
 </references>
 
 </back>

@@ -10,7 +10,7 @@ Expires: April 11, 2020
 
 
       Moving DNSSEC Lookaside Validation (DLV) to Historic Status
-                    draft-ietf-dnsop-obsolete-dlv-00
+                    draft-ietf-dnsop-obsolete-dlv-01
 
 Abstract
 

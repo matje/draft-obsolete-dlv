@@ -9,7 +9,7 @@ updates		= [
     6698,
     6840
 ]
-date            = 2019-10-09T09:43:05Z
+date            = 2019-10-09T09:59:06Z
 keyword         = [
     "DNS",
     "DNSSEC",
@@ -18,7 +18,7 @@ keyword         = [
 
 [seriesInfo]
 name            = "Internet-Draft"
-value           = "draft-ietf-dnsop-obsolete-dlv-00"
+value           = "draft-ietf-dnsop-obsolete-dlv-01"
 status          = "standard"
 
 [[author]]
