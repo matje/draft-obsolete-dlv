@@ -25,10 +25,6 @@ organization    = "ISC"
  [author.address]
  email          = "matthijs@isc.org"
   [author.address.postal]
-  street        = "950 Charter St"
-  city          = "Redwood City"
-  region        = "CA"
-  code          = "94063"
   country       = "Netherlands"
 
 [[author]]
