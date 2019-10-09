@@ -5,7 +5,11 @@ workgroup       = "DNS Operations"
 area            = "Operations and Management"
 submissiontype  = "IETF"
 ipr             = "trust200902"
-date            = 
+updates		= [
+    6698,
+    6840
+]
+date            = 2019-10-09T09:43:05Z
 keyword         = [
     "DNS",
     "DNSSEC",
@@ -15,7 +19,7 @@ keyword         = [
 [seriesInfo]
 name            = "Internet-Draft"
 value           = "draft-ietf-dnsop-obsolete-dlv-00"
-status          = "informational"
+status          = "standard"
 
 [[author]]
 initials        = "W.M."
@@ -46,7 +50,9 @@ organization    = "ISC"
 .# Abstract
 
 This document obsoletes DNSSEC lookaside validation (DLV) and reclassifies
-RFCs 4431 and 5074 as Historic.
+RFCs 4431 and 5074 as Historic. Furthermore, this document updates RFC 6698 by
+excluding the DLV resource record from certificates, and updates RFC 6840 by
+excluding the DLV registries from the trust anchor selection.
 
 {mainmatter}
 
