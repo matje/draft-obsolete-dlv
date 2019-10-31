@@ -56,7 +56,6 @@ excluding the DLV registries from the trust anchor selection.
 
 {mainmatter}
 
-
 # Introduction
 
 DNSSEC Lookaside Validation (DLV) was introduced to assist with the adoption of
@@ -66,6 +65,13 @@ zones under an unsigned parent zone, or that have registrars that don't accept
 DS records.  The root zone is signed since July 2010 and as of May 2019,
 1389 out of 1531 TLDs have a secure delegation from the root; thus DLV has
 served its purpose and can now retire.
+
+# Terminology
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+"OPTIONAL" in this document are to be interpreted as described in
+[@!RFC2119] and [@!RFC8174].
 
 # Discussion
 
