@@ -77,7 +77,7 @@ However, keeping the DLV mechanism also has disadvantages:
 * It reduces the pressure on registrars to accept DS records.
 * It complicates validation code.
 
-In addition, not every validator actually implements DLV (only BIND 9 and
+In addition, not every validator actually implemented DLV (only BIND 9 and
 Unbound) so even if an entity can use DLV to set up an alternate path to its
 trust anchor, its effect is limited.  Furthermore, there was one well-known DLV
 registry (dlv.isc.org) and that has been deprecated (replaced with a signed
@@ -86,8 +86,7 @@ registry service it is unlikely that there is a real benefit for the protocol
 on the Internet nowadays.
 
 One other possible reason to keep DLV is to distribute trust anchors
-for private enterprises.  The authors are not aware of any such use
-of DLV.
+for private enterprises.  There are no known uses of DLV for this.
 
 All things considered it is probably not worth the effort of maintaining
 the DLV mechanism.
